@@ -107,12 +107,16 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { RippleModule } from 'primeng/ripple';
 import { StyleClassModule } from 'primeng/styleclass';
 import { MessageService } from 'primeng/api';
+import { ReportspediatricsComponent } from './Components/Servinte/Reports/reportspediatrics/reportspediatrics.component';
+import { HomeComponent } from './Components/reportsHome/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportceComponent,
-    LoginComponent
+    LoginComponent,
+    ReportspediatricsComponent,
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,

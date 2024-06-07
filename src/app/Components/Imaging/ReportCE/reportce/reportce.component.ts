@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ImagingService } from '../../../../Services/Imaging/imaging.service';
 import { EntidadService } from '../../../../Services/Servinte/entidad.service';
 import * as XLSX from 'xlsx';
@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
   templateUrl: './reportce.component.html',
   styleUrl: './reportce.component.css'
 })
-export class ReportceComponent {
+export class ReportceComponent implements OnInit {
 
   formDate: FormGroup;
 
@@ -69,7 +69,7 @@ export class ReportceComponent {
                 element.Tipo_Usuario = "CONTRIBUTIVO"
               }
             }
-          }
+           }
 
           // this.entidadService.getentidadPaciente(element.Num_de_Identificacion).subscribe((data1) => {
           //   this.entidad = data1.body;

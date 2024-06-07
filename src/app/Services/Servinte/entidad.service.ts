@@ -19,4 +19,9 @@ export class EntidadService {
     return this.http.get<any[]>(url, {observe: 'response'})
   }
 
+  getConsultasPediatria(object: any): Observable<any>{
+    const url = 'http://localhost:3002/evolucionesespecialistas';
+    return this.http.post<any[]>(url, object,{observe: 'response'})
+  }
+
 }

@@ -1,0 +1,50 @@
+<div style="width: 80%; margin-top: 5%; margin-left: 10%;">
+    <button type="button" class="btn btn-primary" (click)="generateExcel()">Descargar</button>
+</div>
+<div style="width: 80%; margin-top: 1%; margin-left: 10%;">
+    <div class="card">
+        <p-table [value]="consultasPediatria" [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
+            [tableStyle]="{ 'min-width': '50rem' }"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [rowsPerPageOptions]="[5, 10, 20, 100]">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>FECHA</th>
+                    <th>FECHA_APERTURA</th>
+                    <th>PACTID</th>
+                    <th>PACIDE</th>
+                    <th>HISTORIA</th>
+                    <th>NOM_ESPECIALISTA</th>
+                    <th>ESPNOM</th>
+                    <th>PROGRAMA</th>
+                    <th>FECHA_HORA_FIRMA</th>
+                    <th>FECHA_FIRMA</th>
+                    <th>HORA_FIRMA</th>
+                    <th>TURNO</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-consulta>
+                <tr>
+                    <td>{{consulta.FECHA}}</td>
+                    <td>{{consulta.FECHA_APERTURA}}</td>
+                    <td>{{consulta.PACTID}}</td>
+                    <td>{{consulta.PACIDE}}</td>
+                    <td>{{consulta.HISTORIA}}</td>
+                    <td>{{consulta.NOM_ESPECIALISTA}}</td>
+                    <td>{{consulta.ESPNOM}}</td>
+                    <td>{{consulta.PROGRAMA}}</td>
+                    <td>{{consulta.FECHA_HORA_FIRMA}}</td>
+                    <td>{{consulta.FECHA_FIRMA}}</td>
+                    <td>{{consulta.HORA_FIRMA}}</td>
+                    <td>{{consulta.TURNO}}</td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="paginatorleft">
+                <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+            </ng-template>
+            <ng-template pTemplate="paginatorright">
+                <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
